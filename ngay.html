@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ngày</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input{
+			width: 20%;
+			margin-right: 30px;
+			/*padding: 30px;*/
+		}
+	</style>
+</head>
+<body>
+<input  id = "num1" min="1" max="12" type="number">
+<button type="button" onclick="day()">ok</button>
+<div id="demo"></div>
+<script >
+	function day(){
+	let num1 = parseInt(document.getElementById("num1").value);
+	switch (num1) {
+	  case 1:
+	  case 3:
+	  case 5:
+	  case 7:
+	  case 8:
+	  case 10:
+	  case 12:
+    	document.getElementById("demo").innerHTML= "tháng" + num1 + " có 31 ngày"; 
+    	break;
+	  case 2:
+	    document.getElementById('demo').innerHTML= "tháng" + num1 + " có 28 hoặc 29 ngày"; 
+    	break;
+	  case 4:
+	  case 6:
+	  case 9:
+	  case 11:
+	    document.getElementById('demo').innerHTML= "tháng" + num1 + " có 30 ngày"; 
+	    break;
+	}
+}
+</script>
+
+</body>
+</html>
